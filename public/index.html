@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NASVAY — Fashion Store</title>
+<link rel="stylesheet" href="/style.css">
+<script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body>
+<header><a class="logo" href="/">KAYMYD IMPORT HUB</a><nav><a href="/">Home</a><a href="#shop">Shop</a><a href="#account">Account</a><a href="#orders">Orders</a><button onclick="openCart()">Cart <b id="cartCount">0</b></button></nav></header>
+<main>
+<section class="hero"><div><small>NEW SEASON / 2026</small><h1>Designed for the modern woman.</h1><p>Carefully crafted fashion for everyday confidence, comfort and effortless style.</p><a class="btn light" href="#shop">SHOP COLLECTION →</a></div></section>
+<section class="trust"><div>🚚 <b>FREE DELIVERY</b><span>On orders above ₦20,000</span></div><div>▣ <b>SECURE PAYMENTS</b><span>Powered by Paystack</span></div></section>
+<section id="shop" class="section"><div class="heading"><h2>New Arrivals</h2><button onclick="loadProducts()">Refresh</button></div><div id="products" class="grid"></div></section>
+<section id="account" class="section panel"><h2>My Account</h2><div id="accountBox"></div></section>
+<section id="orders" class="section panel"><h2>My Orders</h2><div id="ordersBox"></div></section>
+</main>
+<div id="cart" class="drawer"><div class="drawer-head"><h2>Your Cart</h2><button onclick="closeCart()">×</button></div><div id="cartItems"></div><div class="cart-total">Total: <b id="cartTotal">₦0</b></div><button class="btn dark full" onclick="checkout()">Checkout</button></div>
+<div id="authModal" class="modal"><div class="modal-card"><button class="x" onclick="closeAuth()">×</button><div id="authContent"></div></div></div>
+<div id="checkoutModal" class="modal"><div class="modal-card"><button class="x" onclick="closeCheckout()">×</button><h2>Delivery & Payment</h2><form id="checkoutForm"><input name="name" placeholder="Full name" required><input name="email" type="email" placeholder="Email" required><input name="phone" placeholder="Phone"><input name="address" placeholder="Delivery address" required><input name="city" placeholder="City"><input name="state" placeholder="State"><button class="btn dark full">Pay with Paystack</button></form><p class="note">Your card details are entered securely in Paystack Checkout.</p></div></div>
+<div id="toast"></div>
+<script src="/app.js"></script>
+</body></html>
