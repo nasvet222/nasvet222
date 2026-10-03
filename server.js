@@ -279,4 +279,4 @@ app.get("/{*splat}",(req,res)=>{
   if(req.path.startsWith("/api/")) return res.status(404).json({error:"Not found"});
   res.sendFile(path.join(__dirname,"public","index.html"));
 });
-app.listen(PORT,()=>console.log(`NASVAY running at ${BASE_URL}`));
+app.listen(PORT,"0.0.0.0",()=>console.log(`NASVAY running at ${BASE_URL}`));
